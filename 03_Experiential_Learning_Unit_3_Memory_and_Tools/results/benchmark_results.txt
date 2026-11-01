@@ -1,0 +1,55 @@
+BENCHMARK RESULTS — Memory and Tools Experiment
+Generated: 2026-11-01T19:31:36+00:00
+================================================================================
+
+| # | Question | Memoryless Result | Memory Agent Result | Correct? |
+|---|----------|-------------------|---------------------|----------|
+| Q1 | What is the maximum hotel expense per night for do... | I don't have access to any prior context or knowledge bas... | Based on KB001: Domestic Travel Policy: Employees are all... | ML=✗ / MA=✓ |
+| Q2 | Based on the travel policy, what is the total budg... | I don't have access to any prior context or knowledge bas... | Based on KB003: Domestic Travel Budget: Total approved tr... | ML=✗ / MA=✓ |
+| Q3 | What is 15% of the maximum allowed meal expense?... | I don't have access to any prior context or knowledge bas... | Based on KB002: Meal Allowance Policy: The maximum allowe... | ML=✗ / MA=✓ |
+| Q4 | What meeting room booking policy applies for group... | I don't have access to any prior context or knowledge bas... | Based on KB005: Meeting Room Booking Policy: For groups o... | ML=✗ / MA=✓ |
+| Q5 | If flights cost Rs 8500 and hotel is Rs 4000/night... | I don't have access to any prior context or knowledge bas... | Based on KB003: Domestic Travel Budget: Total approved tr... | ML=✗ / MA=✓ |
+
+================================================================================
+FULL ANSWERS
+================================================================================
+
+[Q1] What is the maximum hotel expense per night for domestic travel?
+  Expected keyword : 5000
+  Memoryless answer: I don't have access to any prior context or knowledge base. I cannot answer multi-hop or policy-specific questions without memory.
+  Memory answer    : Based on KB001: Domestic Travel Policy: Employees are allowed a maximum hotel expense of Rs 5000 per night for domestic travel. All hotel bookings must be pre-approved by the direct manager at least 48 hours before travel.
+[Sources: KB001, KB003, KB002 | Confidence: 44.53%]
+  Memoryless correct: NO
+  Memory correct    : YES
+
+[Q2] Based on the travel policy, what is the total budget for a 3-night trip including meals?
+  Expected keyword : 19500
+  Memoryless answer: I don't have access to any prior context or knowledge base. I cannot answer multi-hop or policy-specific questions without memory.
+  Memory answer    : Based on KB003: Domestic Travel Budget: Total approved travel budget for a standard domestic trip is Rs 25000. This covers flights, hotel, meals, and local transport. Any overrun requires VP Finance approval before travel.  Computed: 5000 * 3 + 1500 * 3 = 19500
+[Sources: KB003, KB001, KB007 | Confidence: 28.48%]
+  Memoryless correct: NO
+  Memory correct    : YES
+
+[Q3] What is 15% of the maximum allowed meal expense?
+  Expected keyword : 225
+  Memoryless answer: I don't have access to any prior context or knowledge base. I cannot answer multi-hop or policy-specific questions without memory.
+  Memory answer    : Based on KB002: Meal Allowance Policy: The maximum allowed meal expense is Rs 1500 per day for domestic travel. This covers breakfast, lunch, and dinner combined. Original receipts must be submitted within 7 days of returning.  Computed: 15 / 100 * 1500 = 225.0
+[Sources: KB002, KB001, KB006 | Confidence: 24.26%]
+  Memoryless correct: NO
+  Memory correct    : YES
+
+[Q4] What meeting room booking policy applies for groups larger than 10 people?
+  Expected keyword : 301
+  Memoryless answer: I don't have access to any prior context or knowledge base. I cannot answer multi-hop or policy-specific questions without memory.
+  Memory answer    : Based on KB005: Meeting Room Booking Policy: For groups of 10 or fewer participants, any available conference room can be booked via the room-booking portal. For groups larger than 10 people, the large boardroom (Room 301) must be used and the booking requires approval from Office Administration at least 24 hours in advance.
+[Sources: KB005, KB004, KB009 | Confidence: 27.85%]
+  Memoryless correct: NO
+  Memory correct    : YES
+
+[Q5] If flights cost Rs 8500 and hotel is Rs 4000/night for 2 nights, is this within the travel budget?
+  Expected keyword : YES
+  Memoryless answer: I don't have access to any prior context or knowledge base. I cannot answer multi-hop or policy-specific questions without memory.
+  Memory answer    : Based on KB003: Domestic Travel Budget: Total approved travel budget for a standard domestic trip is Rs 25000. This covers flights, hotel, meals, and local transport. Any overrun requires VP Finance approval before travel.  Computed: 8500 + 4000 * 2 = 16500  YES — total spend of Rs 16,500 is within the Rs 25,000 domestic travel budget.
+[Sources: KB003, KB007, KB001 | Confidence: 36.11%]
+  Memoryless correct: NO
+  Memory correct    : YES

@@ -1,0 +1,8 @@
+Goal: Plan 3-day business trip to Mumbai within budget Rs 25,000 with client meetings
+
+Nodes explored (best-first):
+  [B1] Ibis Mumbai Airport — score=8.4 sold_out=True
+  [B2] Treebo Trend Neelkanth — score=8.4 sold_out=False
+
+Chosen: {"option_id": "B2", "name": "Treebo Trend Neelkanth", "branch": "Budget Hotels (Andheri / Powai)", "price_per_night_rs": 2400, "heuristic_score": 8.4}
+Backtracks: 1

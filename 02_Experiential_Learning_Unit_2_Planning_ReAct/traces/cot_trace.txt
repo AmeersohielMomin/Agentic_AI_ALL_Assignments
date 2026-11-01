@@ -1,0 +1,17 @@
+Goal: Plan 3-day business trip to Mumbai within budget Rs 25,000 with client meetings
+
+Step 1: 1. Search available flights to Mumbai (BOM) within budget
+  Status: SUCCESS
+  Output: {"flight": "AI-665 DEL→BOM", "price_rs": 6800, "duration": "2h 15m"}
+
+Step 2: 2. Check client meeting availability and confirm slots
+  Status: SUCCESS
+  Output: {"meetings": ["Mon 10am – Tata Client", "Tue 3pm – HDFC Review"], "status": "confirmed"}
+
+Step 3: 3. Calculate total budget allocation (flights + hotel + transport + meals)
+  Status: SUCCESS
+  Output: {"flights": 6800, "hotel": 12000, "transport": 2400, "meals": 3600, "total": 24800, "within_budget": true}
+
+Step 4: 4. Book hotel near client offices (budget: Rs 4,000/night × 3 nights)
+  Status: FAILED
+  Error : Hotel Trident BKC is fully booked for requested dates.
